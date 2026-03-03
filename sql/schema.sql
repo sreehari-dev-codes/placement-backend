@@ -38,3 +38,10 @@ CREATE TABLE IF NOT EXISTS admins (
     username VARCHAR(50) UNIQUE,
     password VARCHAR(255)
 );
+
+CREATE TABLE IF NOT EXISTS profile_views (
+    view_id SERIAL PRIMARY KEY,
+    student_id INT REFERENCES students(student_id) ON DELETE SET NULL,
+    viewed_by VARCHAR(100),
+    viewed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

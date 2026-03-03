@@ -30,12 +30,17 @@ const store = {
   applications: [
     { application_id: 1, student_id: 1, job_id: 1, status: "Applied", applied_at: new Date().toISOString() },
   ],
+  profileViews: [
+    { view_id: 1, student_id: 1, viewed_by: "demo", viewed_at: new Date().toISOString() },
+    { view_id: 2, student_id: 2, viewed_by: "demo", viewed_at: new Date().toISOString() },
+  ],
   admins: [{ admin_id: 1, username: "admin", password: "admin123" }],
   counters: {
     students: 3,
     companies: 3,
     jobs: 3,
     applications: 2,
+    profileViews: 3,
     admins: 2,
   },
 };

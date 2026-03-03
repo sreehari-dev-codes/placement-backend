@@ -10,3 +10,13 @@ VALUES
   ('TechNova', 'Bangalore', 7.50),
   ('DataSphere', 'Hyderabad', 8.00)
 ON CONFLICT DO NOTHING;
+
+INSERT INTO profile_views (student_id, viewed_by)
+SELECT seed.student_id, seed.viewed_by
+FROM (
+  VALUES
+    (1, 'seed'),
+    (2, 'seed'),
+    (1, 'seed')
+) AS seed(student_id, viewed_by)
+WHERE NOT EXISTS (SELECT 1 FROM profile_views);

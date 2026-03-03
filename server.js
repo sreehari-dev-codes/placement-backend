@@ -6,6 +6,7 @@ const companyRoutes = require("./routes/companyRoutes");
 const jobRoutes = require("./routes/jobRoutes");
 const applicationRoutes = require("./routes/applicationRoutes");
 const adminRoutes = require("./routes/adminRoutes");
+const profileViewRoutes = require("./routes/profileViewRoutes");
 
 dotenv.config();
 
@@ -49,6 +50,7 @@ app.use("/api/companies", companyRoutes);
 app.use("/api/jobs", jobRoutes);
 app.use("/api/applications", applicationRoutes);
 app.use("/api/admins", adminRoutes);
+app.use("/api/profile-views", profileViewRoutes);
 
 app.use((err, _req, res, _next) => {
   console.error(err);
