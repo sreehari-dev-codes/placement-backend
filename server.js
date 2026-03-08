@@ -15,7 +15,7 @@ const PORT = Number(process.env.PORT) || 5000;
 
 const allowedOrigins = (
   process.env.CORS_ORIGINS ||
-  "http://localhost:5173,http://localhost:5174,http://localhost:3000"
+  "https://placement-dashboad-frontend-3jur.vercel.app,http://localhost:5173,http://localhost:5174,http://localhost:300"
 )
   .split(",")
   .map((origin) => origin.trim())
